@@ -1,8 +1,11 @@
 {
   "env": {
     "production": {
-      "presets": ["stage-0", "react", "react-optimize", [
-        "env", {
+      "presets": [
+        "react",
+        "react-optimize",
+        [
+          "env", {
             "debug": true,
             "modules": false,
             "useBuiltIns": true,
@@ -10,13 +13,16 @@
               "browsers": "defaults"
             }
           }
-        ]
+        ],
+        "stage-0"
       ],
       "plugins": ["transform-decorators-legacy"]
     },
     "development": {
-      "presets": ["stage-0", "react", [
-        "env", {
+      "presets": [
+        "react",
+        [
+          "env", {
             "debug": false,
             "modules": false,
             "useBuiltIns": true,
@@ -24,22 +30,26 @@
               "browsers": ["chrome >= 56"]
             }
           }
-        ]
+        ],
+        "stage-0"
       ],
       "plugins": [
         "transform-decorators-legacy"
       ]
     },
     "cli": {
-      "presets": ["stage-0", "react", [
-        "env", {
+      "presets": [
+        "react",
+        [
+          "env", {
             "debug": true,
             "modules": false,
             "targets": {
               "node": "current"
             }
           }
-        ]
+        ],
+        "stage-0"
       ],
       "plugins": ["transform-decorators-legacy"]
     }
