@@ -71,17 +71,17 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
+        use: [ExtractTextPlugin.extract({
           fallbackLoader: 'style',
           loader: 'css'
-        })
+        })]
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
+        use: [ExtractTextPlugin.extract({
           fallbackLoader: 'style',
           loader: 'css?minifier!group-css-media-queries!sass'
-        })
+        })]
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,

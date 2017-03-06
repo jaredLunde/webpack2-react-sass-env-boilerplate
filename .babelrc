@@ -1,7 +1,7 @@
 {
   "env": {
     "production": {
-      "presets": ["react", "react-optimize", [
+      "presets": ["stage-0", "react", "react-optimize", [
         "env", {
             "debug": true,
             "modules": false,
@@ -15,7 +15,7 @@
       "plugins": ["transform-decorators-legacy", "transform-class-properties"]
     },
     "development": {
-      "presets": ["react", [
+      "presets": ["stage-0", "react", [
         "env", {
             "debug": false,
             "modules": false,
@@ -35,7 +35,7 @@
       ]
     },
     "cli": {
-      "presets": ["react", [
+      "presets": ["stage-0", "react", [
         "env", {
             "debug": true,
             "modules": false,
