@@ -21,9 +21,7 @@
             "modules": false,
             "useBuiltIns": true,
             "targets": {
-              "browsers": {
-                "chrome": ">=56"
-              }
+              "browsers": ["chrome >= 56"]
             }
           }
         ]
