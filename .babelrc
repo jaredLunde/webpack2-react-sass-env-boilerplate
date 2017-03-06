@@ -12,7 +12,7 @@
           }
         ]
       ],
-      "plugins": ["transform-decorators-legacy"]
+      "plugins": ["transform-decorators-legacy", "transform-class-properties"]
     },
     "development": {
       "presets": ["react", [
@@ -28,7 +28,11 @@
           }
         ]
       ],
-      "plugins": ["react-hot-loader/babel", "transform-decorators-legacy"]
+      "plugins": [
+        "react-hot-loader/babel",
+        "transform-decorators-legacy",
+        "transform-class-properties"
+      ]
     },
     "cli": {
       "presets": ["react", [
@@ -41,7 +45,7 @@
           }
         ]
       ],
-      "plugins": ["transform-decorators-legacy"]
+      "plugins": ["transform-decorators-legacy", "transform-class-properties"]
     }
   }
 }
