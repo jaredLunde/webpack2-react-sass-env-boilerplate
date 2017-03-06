@@ -1,0 +1,45 @@
+{
+  "env": {
+    "production": {
+      "presets": ["react", "react-optimize", [
+        "env", {
+            "debug": true,
+            "modules": false,
+            "useBuiltIns": true,
+            "targets": {
+              "browsers": "defaults"
+            }
+          }
+        ]
+      ],
+      "plugins": ["transform-decorators-legacy"]
+    },
+    "development": {
+      "presets": ["react", [
+        "env", {
+            "debug": true,
+            "modules": false,
+            "useBuiltIns": true,
+            "targets": {
+              "browsers": "last 1 version"
+            }
+          }
+        ]
+      ],
+      "plugins": ["react-hot-loader/babel", "transform-decorators-legacy"]
+    },
+    "cli": {
+      "presets": ["react", [
+        "env", {
+            "debug": true,
+            "modules": false,
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ],
+      "plugins": ["transform-decorators-legacy"]
+    }
+  }
+}
