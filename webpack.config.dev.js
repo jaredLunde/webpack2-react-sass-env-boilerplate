@@ -66,7 +66,7 @@ module.exports = {
     descriptionFiles: ["package.json"],
     moduleExtensions: ["-loader"],
     // Extensions used to resolve modules
-    extensions: [ '.js', '.react.js', '.scss', '.css']
+    extensions: ['.js', '.react.js', '.scss', '.css']
   },
 
   module: {
