@@ -43,7 +43,7 @@
         [
           "env", {
             "debug": true,
-            "modules": false,
+            "modules": true,
             "useBuiltIns": true,
             "targets": {
               "node": "current"
