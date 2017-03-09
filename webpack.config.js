@@ -5,21 +5,21 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 /**
 var modernizrConfig = {
-  "filename": "modernizr.js",
-  'options': [
+  filename: 'modernizr.js',
+  options: [
     'setClasses',
     'html5printshiv'
   ],
-  'feature-detects': [
-    "inputtypes",
-    "network/connection",
-    "touchevents"
+  feature-detects: [
+    'inputtypes',
+    'network/connection',
+    'touchevents'
   ],
-  "minify" : {
-    "output": {
-      "comments": false,
-      "beautify": false,
-      "screw_ie8": true
+  minify: {
+    output: {
+      comments: false,
+      beautify: false,
+      screw_ie8: true
     }
   }
 }
@@ -42,27 +42,27 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: "{{PKG_NAME}}.js",
+    filename: '{{PKG_NAME}}.js',
     pathinfo: true
   },
   /*
   output: {
-          path: path.join(__dirname, "dist"),
-          filename: "[chunkhash].js",
-          chunkFilename: "[chunkhash].js"
+          path: path.join(__dirname, 'dist'),
+          filename: '[chunkhash].js',
+          chunkFilename: '[chunkhash].js'
       },
    */
 
   resolveLoader: {
     modules: [path.join(__dirname, 'node_modules')],
-    moduleExtensions: ["-loader"],
+    moduleExtensions: ['-loader'],
   },
 
   resolve: {
     // Directories that contain our modules
-    modules: [path.resolve(__dirname, "lib"), "node_modules"],
-    descriptionFiles: ["package.json"],
-    moduleExtensions: ["-loader"],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    descriptionFiles: ['package.json'],
+    moduleExtensions: ['-loader'],
     // Extensions used to resolve modules
     extensions: ['.js', '.react.js', '.scss', '.css']
   },
@@ -112,8 +112,8 @@ module.exports = {
                 maxSize: 50000
     }),
     */
-    new webpack.optimize.CommonsChunkPlugin({names: ["vendor"],
-                                             filename: "vendor.js"}),
+    new webpack.optimize.CommonsChunkPlugin({names: ['vendor'],
+                                             filename: 'vendor.js'}),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         pure_getters: true,

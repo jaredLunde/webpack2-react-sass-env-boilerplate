@@ -41,7 +41,7 @@ http2 aggressive code splitting.
 This is an example of a basic Babel 6 configuration utilizing babel-preset-env.
 
 
-### /lib
+### /src
 This is where example index files for both hot reloading (`index.hot.js`) and
 distribution builds (`index.js`) are located, as well as the 'Hello world'
 React component (`App.js`).
