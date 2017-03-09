@@ -33,23 +33,12 @@
         ],
         "stage-0"
       ],
-      "plugins": [
-        "transform-decorators-legacy"
-      ]
+      "plugins": ["transform-decorators-legacy"]
     },
     "cli": {
       "presets": [
         "react",
-        [
-          "env", {
-            "debug": true,
-            "modules": true,
-            "useBuiltIns": true,
-            "targets": {
-              "node": "current"
-            }
-          }
-        ],
+        "env",
         "stage-0"
       ],
       "plugins": ["transform-decorators-legacy"]
