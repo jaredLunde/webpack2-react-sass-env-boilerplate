@@ -1,5 +1,5 @@
 # webpack2-react-sass-env-boilerplate
-## A boilerplate for creating applications with Webpack 2.2, Babel w/ babel-preset-env, React and SASS.
+### A boilerplate for creating applications with Webpack 2.2, Babel w/ babel-preset-env, React and SASS.
 
 This package includes everything you need to start building an application with
 Webpack 2, React and SASS.
