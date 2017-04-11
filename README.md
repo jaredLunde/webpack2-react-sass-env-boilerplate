@@ -4,6 +4,35 @@
 This package includes everything you need to start building an application with
 Webpack 2, React and SASS.
 
+## To use with a bash script:
+1. Create `create-app` executable
+```sh
+echo '#!/bin/bash
+if [ -z "$1" ]; then
+  echo "No package name was provided."
+  exit 1
+fi
+
+PKG_NAME=$1
+mkdir $PKG_NAME
+cd $PKG_NAME
+npm install webpack2-react-sass-env-boilerplate
+cp -r ./node_modules/webpack2-react-sass-env-boilerplate/. ./
+mv package.json.tpl package.json
+find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i -e "s/{{PKG_NAME}}/${PKG_NAME}/g" {} \;;
+find . -type d -name "*{{PKG_NAME}}*" -and -not -path "*/node_modules/*" -exec rename "s/(.*)\{\{PKG_NAME\}\}/\$1${PKG_NAME}/" {} \;;
+npm start' > create-app
+```
+
+2. Make sure you can execute the script
+```sh 
+chmod 0744 create-app
+```
+
+3. Execute the script w/ a package name
+```sh
+./create-app your-pkg-name
+```
 
 ### package.json
 Here you'll find a list of devDependencies for creating this type of
@@ -51,3 +80,4 @@ React component (`App.js`).
 Development Javascript files are output to this folder from
 `webpack.config.dev.js` and static assets such as images and SASS can be
 placed in here.
+
