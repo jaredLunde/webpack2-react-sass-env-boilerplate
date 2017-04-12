@@ -20,7 +20,7 @@ npm init -y
 npm install webpack2-react-sass-env-boilerplate
 cp -r ./node_modules/webpack2-react-sass-env-boilerplate/. ./
 mv package.json.tpl package.json
-find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i.bak -e "s/{{PKG_NAME}}/${PK$
+find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i.bak -e "s/{{PKG_NAME}}/${PKG_NAME}/g" {} \;;
 find . -type f -name "*.bak" -and -not -path "*/node_modules/*" -exec rm {} \;;
 mv "./assets/css/{{PKG_NAME}}" "./assets/css/${PKG_NAME}"
 npm start' > create-app
