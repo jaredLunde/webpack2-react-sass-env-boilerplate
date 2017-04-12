@@ -7,7 +7,7 @@ Webpack 2, React and SASS.
 ## To use with a bash script:
 1. Create `create-app` executable
 ```sh
-#!/bin/bash
+echo '#!/bin/bash
 if [ -z "$1" ]; then
   echo "No package name was provided."
   exit 1
