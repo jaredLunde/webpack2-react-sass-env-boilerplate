@@ -7,7 +7,7 @@ Webpack 2, React and SASS.
 ## To use with a bash script:
 1. Create `create-app` executable
 ```sh
-echo '#!/bin/bash
+#!/bin/bash
 if [ -z "$1" ]; then
   echo "No package name was provided."
   exit 1
@@ -16,11 +16,13 @@ fi
 PKG_NAME=$1
 mkdir $PKG_NAME
 cd $PKG_NAME
+npm init -y
 npm install webpack2-react-sass-env-boilerplate
 cp -r ./node_modules/webpack2-react-sass-env-boilerplate/. ./
 mv package.json.tpl package.json
-find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i -e "s/{{PKG_NAME}}/${PKG_NAME}/g" {} \;;
-find . -type d -path "*{{PKG_NAME}}*" -and -not -path "*/node_modules/*" -exec rename "s/(.*)\{\{PKG_NAME\}\}/\$1${PKG_NAME}/" {} \;;
+find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i.bak -e "s/{{PKG_NAME}}/${PK$
+find . -type f -name "*.bak" -and -not -path "*/node_modules/*" -exec rm {} \;;
+mv "./assets/css/{{PKG_NAME}}" "./assets/css/${PKG_NAME}"
 npm start' > create-app
 ```
 
