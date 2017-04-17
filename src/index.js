@@ -1,9 +1,8 @@
-// css imports
+// static imports
 require('../assets/css/{{PKG_NAME}}/core.scss')
 
-
 // js
-import "babel-polyfill"
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'

@@ -16,16 +16,18 @@ fi
 PKG_NAME=$1
 mkdir $PKG_NAME
 cd $PKG_NAME
+npm init -y
 npm install webpack2-react-sass-env-boilerplate
 cp -r ./node_modules/webpack2-react-sass-env-boilerplate/. ./
 mv package.json.tpl package.json
-find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i -e "s/{{PKG_NAME}}/${PKG_NAME}/g" {} \;;
-find . -type d -name "*{{PKG_NAME}}*" -and -not -path "*/node_modules/*" -exec rename "s/(.*)\{\{PKG_NAME\}\}/\$1${PKG_NAME}/" {} \;;
+find . -type f \( -name "*.html" -o -name "*.js" -o -name "*.ejs" -o -name "*.json" \) -and -not -path "*/node_modules/*" -exec sed -i.bak -e "s/{{PKG_NAME}}/${PKG_NAME}/g" {} \;;
+find . -type f -name "*.bak" -and -not -path "*/node_modules/*" -exec rm {} \;;
+mv "./assets/css/{{PKG_NAME}}" "./assets/css/${PKG_NAME}"
 npm start' > create-app
 ```
 
 2. Make sure you can execute the script
-```sh 
+```sh
 chmod 0744 create-app
 ```
 
@@ -80,4 +82,3 @@ React component (`App.js`).
 Development Javascript files are output to this folder from
 `webpack.config.dev.js` and static assets such as images and SASS can be
 placed in here.
-

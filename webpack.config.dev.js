@@ -16,7 +16,7 @@ var modernizrConfig = {
     'setClasses',
     'html5printshiv'
   ],
-  feature-detects: [
+  'feature-detects': [
     'inputtypes',
     'network/connection',
     'touchevents'
