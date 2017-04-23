@@ -10,6 +10,7 @@ new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true,
+  disableHostCheck: true,
   quiet: true,
   compress: true
 }).listen(3000, '0.0.0.0', function (err, result) {
