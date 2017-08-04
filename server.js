@@ -8,10 +8,10 @@ console.log("NODE_ENV:", process.env.NODE_ENV)
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  hot: true,
   historyApiFallback: true,
   disableHostCheck: true,
   quiet: true,
+  inline: true,
   compress: true
 }).listen(3000, '0.0.0.0', function (err, result) {
   if (err)
