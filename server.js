@@ -11,7 +11,7 @@ new WebpackDevServer(webpack(config), {
   historyApiFallback: true,
   disableHostCheck: true,
   quiet: true,
-  inline: true,
+  // inline: true,
   compress: true
 }).listen(3000, '0.0.0.0', function (err, result) {
   if (err)

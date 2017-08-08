@@ -10,14 +10,14 @@
     "react-dom": ">=15.x"
   },
   "devDependencies": {
-    "webpack2-react-sass-env-boilerplate": "^0.2.3"
+    "webpack2-react-sass-env-boilerplate": "^0.2.5"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development node server.js",
+    "start": "cross-env NODE_ENV=development node server.js --hot",
     "build": "npm run build:commonjs && npm run build:es && npm run build:dist",
     "build:commonjs": "rm -rf commonjs && cross-env NODE_ENV=cli babel ./src --out-dir commonjs",
     "build:es": "rm -rf es && cross-env NODE_ENV=production babel ./src --out-dir es",
