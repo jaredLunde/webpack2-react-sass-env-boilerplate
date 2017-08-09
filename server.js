@@ -8,10 +8,7 @@ console.log("NODE_ENV:", process.env.NODE_ENV)
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,
-  sockjsPrefix: '/assets',
-  historyApiFallback: {
-    disableDotRule: true
-  },
+  historyApiFallback: true,
   disableHostCheck: true,
   quiet: true,
   // inline: true,
